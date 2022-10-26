@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.*;
 
 @Controller
@@ -62,10 +63,8 @@ public class StudentController {
     @RequestMapping("/queryStudent")
     public String queryBook(String query,Model model){
         Student student1 = studentService.queryStudentByID(query);
-        List<Student> student2 = studentService.queryStudentByName(query);
-        List<Student> list = new ArrayList<>();
+        List<Student> list = studentService.queryStudentByName(query);
         list.add(student1);
-        list.addAll(student2);
 
         model.addAttribute("list",list);
         return "allStudent";

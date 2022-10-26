@@ -2,16 +2,20 @@ package com.example.service;
 
 import com.example.dao.StudentMapper;
 import com.example.pojo.Student;
+import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
+@Service
 public class StudentServiceImpl implements StudentService{
 
+    @Resource
     private StudentMapper studentMapper;
 
-    public void setStudentMapper(StudentMapper studentMapper) {
-        this.studentMapper = studentMapper;
-    }
+//    public void setStudentMapper(StudentMapper studentMapper) {
+//        this.studentMapper = studentMapper;
+//    }
 
     @Override
     public int addStudent(Student student) {

@@ -13,8 +13,8 @@
         <package name="com.example.pojo"/>
     </typeAliases>
     
-    <mappers>
-        <mapper class="com.example.dao.StudentMapper"/>
-    </mappers>
+    <!--<mappers>-->
+    <!--    <mapper class="com.example.dao.StudentMapper"/>-->
+    <!--</mappers>-->
 
 </configuration>
